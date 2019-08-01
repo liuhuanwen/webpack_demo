@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('./asset/font.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
 .hello {
   color: #f00;
+  background: url('./asset/header.jpg');
+  font-family: 'myFont', monospace;
 }
