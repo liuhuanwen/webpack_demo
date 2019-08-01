@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import './style.css'
-import headerPhoto from './asset/header.jpg'
+import headerPhoto from './assets/header.jpg'
 
 function component() {
   var element = document.createElement('div')
