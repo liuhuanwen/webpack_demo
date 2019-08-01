@@ -9,13 +9,16 @@
   "author": "liuhw",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "dependencies": {
     "lodash": "^4.17.15",
     "promise": "^8.0.3"
   },
   "devDependencies": {
+    "css-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   }
