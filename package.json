@@ -3,24 +3,20 @@
   "version": "1.0.0",
   "description": "webpack's demo",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liuhuanwen/webpack_demo.git"
-  },
   "keywords": [
     "webpack"
   ],
   "author": "liuhw",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liuhuanwen/webpack_demo/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/liuhuanwen/webpack_demo#readme",
-  "devDependencies": {},
   "dependencies": {
+    "lodash": "^4.17.15",
     "promise": "^8.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   }
 }
