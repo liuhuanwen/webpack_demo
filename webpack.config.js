@@ -1,14 +1,14 @@
-const path = require('path')
-const srcPath = path.resolve(__dirname, 'src')
+const paths = require('./config/paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: paths.appIndexJs
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: paths.dist
   },
   module: {
     rules: [
@@ -34,8 +34,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(srcPath, 'index.html')
+      template: paths.appHtml
     })
   ]
 }
