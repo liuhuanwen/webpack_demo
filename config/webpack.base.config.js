@@ -1,14 +1,16 @@
-const paths = require('./config/paths')
+const paths = require('./paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: {
-    app: paths.appIndexJs
-  },
+  entry: [
+    require.resolve('./polyfills'),
+    paths.appIndexJs
+  ],
   output: {
+    path: paths.dist,
     filename: '[name].bundle.js',
-    path: paths.dist
+    publicPath: '/'
   },
   module: {
     rules: [
