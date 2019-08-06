@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "lodash": "^4.17.15",
-    "promise": "^8.0.3"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
