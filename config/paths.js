@@ -11,4 +11,5 @@ module.exports = {
   appHtml: resolveApp('src/index.html'),
   appIndexJs: resolveApp('src/index.js'),
   appPackageJson: resolveApp('package.json'),
+  appNodeModules: resolveApp('node_modules')
 }
