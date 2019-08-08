@@ -1,5 +1,6 @@
 const baseConfig = require('./webpack.base.config')
 const webpackMerge = require('webpack-merge')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = webpackMerge([
   baseConfig,
@@ -12,6 +13,9 @@ module.exports = webpackMerge([
     optimization: {
       // 等同于webpack.optimize.UglifyJsPlugin
       minimize: true
-    }
+    },
+    plugins: [
+      new CleanWebpackPlugin()
+    ]
   }
 ])

@@ -1,7 +1,6 @@
 const paths = require('./paths')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -39,9 +38,9 @@ module.exports = {
             options: {
               // 在css-loader前应用的loader的数量
               importLoaders: 1,
-              modules: true,
-              localIndexName:'[name]__[local]___[hash:base64:5]',
-              minimize: true
+              // modules: true,
+              // localIndexName:'[name]__[local]___[hash:base64:5]',
+              // minimize: true
             }
           },
           {
@@ -50,7 +49,7 @@ module.exports = {
               plugins: () => [
                 require('postcss-flexbugs-fixes'),
                 autoprefixer({
-                  browsers: [
+                  overrideBrowserslist: [
                     '>1%',
                     'last 4 versions',
                     'Firefox ESR',
@@ -89,7 +88,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // true || 'head' || 'body' || false Inject all assets into the given template or templateContent.
       // When passing true or 'body' all javascript resources will be placed at the bottom of the body element.
